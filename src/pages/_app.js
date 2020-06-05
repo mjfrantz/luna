@@ -1,5 +1,7 @@
 import App from 'next/app'
-import SiteLayout from './components/layout/SiteLayout'
+import SiteLayout from '../components/layout/SiteLayout'
+import '../styles/styles.less'
+
 
 class MyApp extends App {
   render() {
