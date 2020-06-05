@@ -1,24 +1,31 @@
 import { NextPage } from 'next';
-import { Layout, Typgraphy, Row } from 'antd';
-
+import { Layout, Row } from 'antd';
 import Nav from './Nav';
-
-const { Header, Footer } = Layout;
-const { Title } = Typography;
-
+const { Header, Footer, Content } = Layout;
 const SiteLayout = props => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Layout>
         <Nav />
-        {props.children}
+        <Content>{props.children}</Content>
         <Footer style={{ textAlign: 'center' }}> Luna 2020</Footer>
       </Layout>
-      <style jsx>{`
-
+      <style jsx global>{`
+         body {
+           padding-top: 48px;;
+         }
+         .banner-info{
+          display: flex;
+          justify-content: flex-start;
+          align-item: center; 
+          margin: 2rem;
+        }
+        .banner-info h3{
+          font-weight:bold;
+        } 
       `}</style>
     </Layout>
   );
 };
-
 export default SiteLayout;
+

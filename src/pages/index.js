@@ -1,9 +1,9 @@
+import Banner from '../components/layout/Banner'
+
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
-      <style jsx>{`
-      `}</style>
+      <Banner />
     </div>
   )
 }

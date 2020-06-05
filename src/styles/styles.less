@@ -4,3 +4,38 @@
   left: 0;
   width: 100%;
 }
+
+.ant-carousel .slick-slider {
+  text-align: center;
+  min-height: 60vh;
+  line-height: 160px;
+  background: @primary-color;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide[data-index="0"] {
+  background-image: url('/images/pic1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 342px;
+
+}
+
+.ant-carousel .slick-slide[data-index="1"] {
+  background-image: url('/images/banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 342px;
+  // flex-wrap: wrap;
+
+}
+
+.slick-slide .slick-active .slick-current div {
+  height: 342px !important;
+}
+
+.slick-list {
+  height: 342px;
+}
