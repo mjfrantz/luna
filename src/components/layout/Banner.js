@@ -9,7 +9,9 @@ const Banner = () => {
   return (
     <Carousel afterChange={onChange}>
       <div>
-        <span className="banner-info"><h3>The Best Hair Care Product</h3></span>
+        <span className="banner-info"><h3>The Best Hair Care Product</h3>
+        </span>
+        <Button type="primary">Primary Button</Button>
       </div>
       <div>
         <h3></h3>
