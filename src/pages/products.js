@@ -22,7 +22,7 @@ const Product = () => {
     return products;
   };
 
-  const [products, setProducts] = useState(createProduct(10));
+  const [products, setProducts] = useState(createProduct(2));
 
   console.log(createProduct(5));
 

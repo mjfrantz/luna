@@ -1,8 +1,9 @@
 import Link from 'next/link';
 
+
 import {
-  Menu
-} from 'antd'
+  Menu, Icon
+} from 'antd';
 import { HeartOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
@@ -10,9 +11,10 @@ const { SubMenu } = Menu;
 const Nav = () => {
   return (
     <Menu mode="horizontal" id="menu">
-      <Menu.Item className="home" key="/">
+      <Menu.Item className="home" key="/" >
         <Link href="/">
-          <a>Luna</a>
+          <a>Luna
+          </a>
         </Link>
       </Menu.Item>
       <Menu.Item key="/products">
@@ -40,3 +42,5 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
