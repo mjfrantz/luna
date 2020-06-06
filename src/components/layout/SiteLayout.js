@@ -17,7 +17,6 @@ const SiteLayout = props => {
          h1, p{
            margin: 0;
          }
-
          .banner-info{
           display: flex;
           justify-content: flex-start;

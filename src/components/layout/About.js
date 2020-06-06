@@ -1,7 +1,11 @@
+import { Typography } from 'antd';
+
+const Title = Typography;
+
 const About = () => {
   return (
-    <div>
-      <h1>About Description</h1>
+    <div className="container">
+      <Title>About Us</Title>
     </div>
   )
 }

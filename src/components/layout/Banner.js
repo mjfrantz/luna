@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Carousel } from 'antd';
 import { Typography } from 'antd';
 import { Button } from 'antd';
@@ -7,33 +8,28 @@ const { Title, Paragraph } = Typography;
 
 const Banner = () => {
   return (
-    <div className="container">
-      <img
-        alt='banner'
-        src='./images/pic-intro.jpg'
-      />
-      <div className="home-hero-headline">
-        <Title>Amazing Hair Care Products</Title>
-        <Paragraph>To Deliver the Best Hair.</Paragraph>
-        <Button type="primary">GET YOUR FORMULA</Button>
-      </div>
+      <div className="container">
+          <Title color="white">Amazing Hair Care Products</Title>
+          <Title level={4}>To Deliver the Best Hair.</Title>
+          <Button type="primary" size="large">
+            <Link href="/products">
+              <a>Buy Formula</a>
+            </Link>
+          </Button>
       <style jsx>{`
-        img{
-          // backgoundSize: 'cover';
-          height: 100%;
-          width: 100%;
-          opacity: 0.75;
-        }
         .container {
           position: relative;
           color: black;
-        }
-        .home-hero-headline {
-          position: absolute;
-          top: 20rem;
-          left: 7.5rem;
-          font-size: 2rem;
-          flex-wrap: wrap;
+          height: 70vh;
+          background-image: linear-gradient(to bottom, rgba(0,0,0, 0.2), rgba(0,0,0,.5)) ,url('/images/pic-intro.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: self-start;
+          padding-left: 3rem;
         }
       `}</style>
     </div>

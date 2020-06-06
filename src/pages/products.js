@@ -36,11 +36,10 @@ const Product = () => {
           optio?
         </Title>
 
-        <Row justify="center" gutter={[16, 42]} style={{ marginTop: '5rem', padding: '0 4rem' }}>
+        <Row justify="center" gutter={[42, 42]} style={{ marginTop: '5rem', padding: '0 4rem' }}>
           {products.map((product) => (
             <Col xs={24} sm={24} md={10} lg={8} xl={6}>
               <Card
-                style={{ width: 280 }}
                 cover={
                   <img
                     alt='example'
