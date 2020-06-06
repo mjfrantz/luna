@@ -1,13 +1,13 @@
 import Banner from '../components/layout/Banner';
+import About from '../components/layout/About';
+
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Banner />
-      <h1>Home</h1>
-      <style jsx>{`
-      `}</style>
-    </>
+      <About />
+    </div>
   )
 }
 

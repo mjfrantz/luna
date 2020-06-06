@@ -10,9 +10,9 @@ const { SubMenu } = Menu;
 const Nav = () => {
   return (
     <Menu mode="horizontal" id="menu">
-      <Menu.Item key="/" icon={<HeartOutlined />}>
+      <Menu.Item className="home" key="/">
         <Link href="/">
-          <a>Home</a>
+          <a>Luna</a>
         </Link>
       </Menu.Item>
       <Menu.Item key="/products">
@@ -23,6 +23,11 @@ const Nav = () => {
       <Menu.Item>
         <Link href="/about">
           <a>About Us</a>
+        </Link>
+      </Menu.Item>
+      <Menu.Item >
+        <Link href="/reviews">
+          <a>Reviews</a>
         </Link>
       </Menu.Item>
       <Menu.Item >

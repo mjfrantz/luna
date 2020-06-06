@@ -14,7 +14,7 @@ const Product = () => {
       products.push({
         title: `Product ${+item + 1}`,
         description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nulla recusandae praesentiun.',
-        quantity:  Math.ceil(Math.random() * 10000),
+        quantity: Math.ceil(Math.random() * 10000),
         price: "$" + Math.round(Math.random() * 100).toFixed(2)
       });
     }
@@ -36,7 +36,7 @@ const Product = () => {
           optio?
         </Title>
 
-        <Row justify="center" gutter={[16, 42]} style={{ marginTop: '5rem', padding: '0 4rem'}}>
+        <Row justify="center" gutter={[16, 42]} style={{ marginTop: '5rem', padding: '0 4rem' }}>
           {products.map((product) => (
             <Col xs={24} sm={24} md={10} lg={8} xl={6}>
               <Card
