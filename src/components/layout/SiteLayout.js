@@ -12,8 +12,12 @@ const SiteLayout = props => {
       </Layout>
       <style jsx global>{`
          body {
-           padding-top: 48px;;
+           padding-top: 48px;
          }
+         h1, p{
+           margin: 0;
+         }
+
          .banner-info{
           display: flex;
           justify-content: flex-start;
