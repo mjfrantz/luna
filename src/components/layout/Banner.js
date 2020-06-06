@@ -2,21 +2,44 @@ import Link from 'next/link';
 import { Carousel } from 'antd';
 import { Typography } from 'antd';
 import { Button } from 'antd';
+import { motion } from 'framer-motion';
 
 const { Title, Paragraph } = Typography;
+
+let easing = [0.6, -0.05, 0.01, 0.99];
+
+
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+    transition: { duration: 0.6, ease: easing }
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.9,
+      ease: easing
+    }
+  }
+};
 
 
 const Banner = () => {
   return (
+    <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <div className="container">
+        <motion.div variants={fadeInUp}>
           <Title color="white">Amazing Hair Care Products</Title>
-          <Title level={4}>To Deliver the Best Hair.</Title>
-          <Button type="primary" size="large">
-            <Link href="/products">
-              <a>Buy Formula</a>
-            </Link>
-          </Button>
-      <style jsx>{`
+        </motion.div>
+        <Title level={4}>To Deliver the Best Hair.</Title>
+        <Button type="primary" size="large">
+          <Link href="/products">
+            <a>Buy Formula</a>
+          </Link>
+        </Button>
+        <style jsx>{`
         .container {
           position: relative;
           color: black;
@@ -32,8 +55,8 @@ const Banner = () => {
           padding-left: 3rem;
         }
       `}</style>
-    </div>
-
+      </div>
+    </motion.div>
   )
 
 }
