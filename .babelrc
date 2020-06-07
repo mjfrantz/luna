@@ -1,11 +1,40 @@
 {
-  "presets": ["next/babel"],
+  "presets": [
+    [
+      "next/babel"
+    ]
+  ],
   "plugins": [
     [
-      "import", {
-        "libraryName": "antd",
-        "style": true
+      "module-resolver",
+      {
+        "alias": {
+          "@components": "./components",
+          "@public": "./public",
+          "@utils": "./utils"
+        }
       }
-    ]
-  ]
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ],
+    "inline-react-svg"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false
+          }
+        ],
+        "next/babel"
+      ]
+    }
+  }
 }

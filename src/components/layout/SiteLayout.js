@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
-import { Layout, Row } from 'antd';
+import { Row, Layout } from 'antd';
 import Nav from './Nav';
+
 const { Header, Footer, Content } = Layout;
 const SiteLayout = props => {
   return (
@@ -11,6 +12,9 @@ const SiteLayout = props => {
         <Footer style={{ textAlign: 'center' }}> Luna 2020</Footer>
       </Layout>
       <style jsx global>{`
+          /// ADD FONT HERE
+
+
          body {
            padding-top: 48px;
          }

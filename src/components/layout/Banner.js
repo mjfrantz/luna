@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import { Carousel } from 'antd';
-import { Typography } from 'antd';
-import { Button } from 'antd';
+import { Carousel, Typography, Button } from 'antd';
 import { motion } from 'framer-motion';
 
 const { Title, Paragraph } = Typography;
