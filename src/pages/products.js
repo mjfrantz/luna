@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Row, Col, Layout, Typography, Card, Avatar, Tag, Button } from 'antd';
+import { Layout, Typography, Card, Avatar, Tag, Button, Row, Col } from 'antd';
 
 const { Content } = Layout;
 const { Title, Subtitle, Text } = Typography;
@@ -24,8 +24,6 @@ const Product = () => {
 
   const [products, setProducts] = useState(createProduct(2));
 
-  console.log(createProduct(5));
-
   return (
     <div>
       <Content style={{ padding: '20px 50px' }}>
@@ -38,7 +36,7 @@ const Product = () => {
 
         <Row justify="center" gutter={[42, 42]} style={{ marginTop: '5rem', padding: '0 4rem' }}>
           {products.map((product) => (
-            <Col xs={24} sm={24} md={10} lg={8} xl={6}>
+            <Col xs={24} sm={24} md={10} lg={8} xl={6} key={product.title}>
               <Card
                 cover={
                   <img
@@ -48,7 +46,7 @@ const Product = () => {
                 }
                 actions={[
                   <Tag>{product.price}</Tag>,
-                  <Button type="primary" small>Buy Now</Button>,
+                  <Button type="primary">Buy Now</Button>,
                 ]}
               >
                 <Meta

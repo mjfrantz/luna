@@ -1,11 +1,7 @@
-import { Typography } from 'antd';
-import { Card } from 'antd';
-import { Row, Col, Layout } from 'antd';
-
+import { Row, Col, Layout, Typography, Card } from 'antd';
 
 const { Content } = Layout;
 const { Title } = Typography;
-
 
 const About = () => {
   return (
