@@ -1,28 +1,38 @@
 import { useState } from 'react';
-import { Layout, Typography, Card, Avatar, Tag, Button, Row, Col } from 'antd';
+import client from '../../config/contentful';
+import { Row, Col, Layout, Typography, Card, Avatar, Tag, Button } from 'antd';
 
 const { Content } = Layout;
 const { Title, Subtitle, Text } = Typography;
 const { Meta } = Card;
 
-const Product = () => {
-  const createProduct = (count) => {
-    const products = [];
-    const arr = Array.from(Array(count).keys());
+export async function getStaticProps() {
+  const entries = await client.getEntries();
 
-    for (const item in arr) {
-      products.push({
-        title: `Product ${+item + 1}`,
-        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nulla recusandae praesentiun.',
-        quantity: Math.ceil(Math.random() * 10000),
-        price: "$" + Math.round(Math.random() * 100).toFixed(2)
-      });
-    }
+  if (entries.items) return { props: { entries } };
 
-    return products;
-  };
+  console.log(`Error getting Entries for ${contentType.name}.`);
+}
 
-  const [products, setProducts] = useState(createProduct(2));
+const Product = ({ entries }) => {
+  // const createProduct = (count) => {
+  //   const products = [];
+  //   const arr = Array.from(Array(count).keys());
+
+  //   for (const item in arr) {
+  //     products.push({
+  //       title: `Product ${+item + 1}`,
+  //       description:
+  //         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nulla recusandae praesentiun.',
+  //       quantity: Math.ceil(Math.random() * 10000),
+  //       price: '$' + Math.round(Math.random() * 100).toFixed(2),
+  //     });
+  //   }
+
+  //   return products;
+  // };
+
+  // const [products, setProducts] = useState(createProduct(2));
 
   return (
     <div>
@@ -33,30 +43,48 @@ const Product = () => {
           repellendus incidunt nihil asperiores in inventore aperiam nobis
           optio?
         </Title>
-
-        <Row justify="center" gutter={[42, 42]} style={{ marginTop: '5rem', padding: '0 4rem' }}>
-          {products.map((product) => (
-            <Col xs={24} sm={24} md={10} lg={8} xl={6} key={product.title}>
-              <Card
-                cover={
-                  <img
-                    alt='example'
-                    src='https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png'
-                  />
-                }
-                actions={[
-                  <Tag>{product.price}</Tag>,
-                  <Button type="primary">Buy Now</Button>,
-                ]}
+    
+        <Row
+          justify='center'
+          gutter={[42, 42]}
+          style={{ marginTop: '5rem', padding: '0 4rem' }}
+        >
+          {entries.items ? (
+            entries.items.map((product) => (
+              <Col
+                xs={24}
+                sm={24}
+                md={10}
+                lg={8}
+                xl={6}
+                key={product.fields.title}
               >
-                <Meta
-                  title={product.title}
-                  description={product.description}
-                />
-              </Card>
-            </Col>
-          ))}
+                <Card
+                  cover={
+                    <img
+                      alt='example'
+                      src={product.fields.image.fields.file.url}
+                    />
+                  }
+                  actions={[
+                    <Tag>{product.fields.price}</Tag>,
+                    <Button type='primary' small>
+                      Buy Now
+                    </Button>,
+                  ]}
+                >
+                  <Meta
+                    title={product.fields.title}
+                    description={product.fields.description}
+                  />
+                </Card>
+              </Col>
+            ))
+          ) : (
+            <Title level={4}>There are no products to display</Title>
+          )}
         </Row>
+        )
       </Content>
     </div>
   );
