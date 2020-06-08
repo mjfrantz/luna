@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import client from '../../config/contentful';
-
 import { Row, Col, Layout, Typography, Card, Avatar, Tag, Button } from 'antd';
 
 const { Content } = Layout;
@@ -35,8 +34,6 @@ const Product = ({ entries }) => {
 
   // const [products, setProducts] = useState(createProduct(2));
 
-  // console.log(createProduct(5));
-
   return (
     <div>
       <Content style={{ padding: '20px 50px' }}>
@@ -46,6 +43,7 @@ const Product = ({ entries }) => {
           repellendus incidunt nihil asperiores in inventore aperiam nobis
           optio?
         </Title>
+    
         <Row
           justify='center'
           gutter={[42, 42]}
