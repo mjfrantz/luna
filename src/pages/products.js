@@ -16,10 +16,6 @@ export async function getStaticProps() {
 }
 
 const Product = ({ entries }) => {
-  const products = entries.items;
-
-  console.log(products);
-
   // const createProduct = (count) => {
   //   const products = [];
   //   const arr = Array.from(Array(count).keys());
@@ -50,14 +46,13 @@ const Product = ({ entries }) => {
           repellendus incidunt nihil asperiores in inventore aperiam nobis
           optio?
         </Title>
-
-        {products.entries.length ? (
-          <Row
-            justify='center'
-            gutter={[42, 42]}
-            style={{ marginTop: '5rem', padding: '0 4rem' }}
-          >
-            {products.map((product) => (
+        <Row
+          justify='center'
+          gutter={[42, 42]}
+          style={{ marginTop: '5rem', padding: '0 4rem' }}
+        >
+          {entries.items ? (
+            entries.items.map((product) => (
               <Col
                 xs={24}
                 sm={24}
@@ -86,11 +81,12 @@ const Product = ({ entries }) => {
                   />
                 </Card>
               </Col>
-            ))}
-          </Row>
-        ) : (
-          <Title>There are no products to display</Title>
-        )}
+            ))
+          ) : (
+            <Title level={4}>There are no products to display</Title>
+          )}
+        </Row>
+        )
       </Content>
     </div>
   );
