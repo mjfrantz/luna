@@ -16,7 +16,7 @@ const SiteLayout = props => {
 
 
          body {
-           padding-top: 48px;
+           padding-top: 0px;
          }
          h1, p{
            margin: 0;
