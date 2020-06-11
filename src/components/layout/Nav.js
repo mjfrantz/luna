@@ -1,18 +1,19 @@
 import Link from 'next/link';
 import {
-  Menu, Icon
+  Menu, Icon, Avatar
 } from 'antd';
+
 import { HeartOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 
+
 const Nav = () => {
   return (
-    <Menu mode="horizontal" id="menu">
-      <Menu.Item className="home" key="/" >
+    <Menu mode="inline" id="menu">
+      <Menu.Item key="/" >
         <Link href="/">
-          <a>Luna
-          </a>
+          <Avatar style={{ width: '100px', height: '45px' }} src="./../images/luna-logo.png" />
         </Link>
       </Menu.Item>
       <Menu.Item key="/products">
@@ -38,7 +39,14 @@ const Nav = () => {
     </Menu>
   );
 };
-
 export default Nav;
+
+
+
+{/* <Menu.Item to="/" key="2">
+    <img className="ant-menu-item" src=="{{ "image.png" | asset_url }}"/>
+    <span>Shopify</span>
+    <Link to="/shopify">Home</Link>
+</Menu.Item> */}
 
 
