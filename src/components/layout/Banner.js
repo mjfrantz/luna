@@ -42,7 +42,7 @@ const Banner = () => {
           position: relative;
           color: black;
           height: 70vh;
-          background-image: linear-gradient(to bottom, rgba(0,0,0, 0.2), rgba(0,0,0,.5)) ,url('/images/pic-intro.jpg');
+          background-image: linear-gradient(to bottom, rgba(0,0,0, 0.2), rgba(0,0,0,.5)) ,url('/images/background-luna.jpeg');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
