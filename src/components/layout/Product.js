@@ -7,11 +7,11 @@ const { Meta } = Card;
 
 const Product = () => {
   return (
-    <div style={{ backgroundColor: '#fff', paddingBottom: '2rem' }}>
+    <div style={{ backgroundColor: '#F0F2F5' }}>
       <Content style={{ paddingTop: '1rem' }}>
         <Title level={5} style={{ textAlign: 'center' }}>#1 rated customized hair care</Title>
         <p style={{ textAlign: 'center' }}>Your hair type. Your hair goals. Your color. Your fragrance. You name it (literally).</p>
-        <Row justify="space-around" style={{ marginTop: '1.5rem' }}>
+        <Row justify="space-around" style={{ margin: '1rem' }}>
           <Card
             hoverable
             style={{ width: 240 }}

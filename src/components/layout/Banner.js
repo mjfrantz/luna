@@ -29,9 +29,9 @@ const Banner = () => {
     <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
       <div className="container">
         <motion.div variants={fadeInUp}>
-          <Title color="white">Amazing Hair Care Products</Title>
+          <Title style={{ color: "black" }}>Amazing Hair Care Products</Title>
         </motion.div>
-        <Title level={4}>To Deliver the Best Hair.</Title>
+        <Title style={{ color: "black" }} level={4}>To Deliver the Best Hair.</Title>
         <Button type="primary" size="large">
           <Link href="/products">
             <a>Buy Formula</a>
@@ -39,12 +39,13 @@ const Banner = () => {
         </Button>
         <style jsx>{`
         .container {
+          background-color: #FFFFFF;
           position: relative;
-          color: black;
-          height: 70vh;
-          background-image: linear-gradient(to bottom, rgba(0,0,0, 0.2), rgba(0,0,0,.5)) ,url('/images/background-luna.jpeg');
+          color: #ffff;
+          height: 80vh;
+          background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0)) ,url('/images/bk.png');
           background-repeat: no-repeat;
-          background-size: cover;
+          background-size: contain;
           background-position: center;
           display: flex;
           flex-direction: column;
@@ -82,3 +83,13 @@ export default Banner;
   // );
 
   //
+
+
+  // background-image: url(/images/homepage/june2020_homepage_d.jpg);
+  // background-size: cover;
+  // background-position: center 20%;
+  // position: absolute;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;

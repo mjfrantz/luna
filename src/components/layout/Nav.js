@@ -10,30 +10,40 @@ const { SubMenu } = Menu;
 
 const Nav = () => {
   return (
-    <Menu mode="horizontal" id="menu">
+    <Menu mode="vertical" id="menu">
       <Menu.Item key="/products">
         <Link href="/products">
-          <a>Products</a>
+          <a>Productos</a>
         </Link>
       </Menu.Item>
       <Menu.Item>
         <Link href="/about">
-          <a>About Us</a>
+          <a>Nosotros</a>
+        </Link>
+      </Menu.Item>
+      <Menu.Item >
+        <Link href="/blog">
+          <a>Blog</a>
         </Link>
       </Menu.Item>
       <Menu.Item key="/" >
         <Link href="/">
-          <Avatar style={{ width: '100px', height: '45px' }} src="./../images/luna-logo.png" />
+          <Avatar style={{ width: '100px', height: '50px' }} src="./../images/luna-logo.png" />
         </Link>
       </Menu.Item>
       <Menu.Item >
         <Link href="/reviews">
-          <a>Reviews</a>
+          <a>Testimonios</a>
         </Link>
       </Menu.Item>
       <Menu.Item >
         <Link href="/contact">
-          <a>Contact</a>
+          <a>Contáctanos</a>
+        </Link>
+      </Menu.Item>
+      <Menu.Item >
+        <Link href="/FAQ">
+          <a>FAQs</a>
         </Link>
       </Menu.Item>
     </Menu>
