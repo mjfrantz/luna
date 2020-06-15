@@ -20,7 +20,9 @@
   "next": "9.4.4",
   "null-loader": "2.0.0",
   "react": "16.13.1",
-  "react-dom": "16.13.1"
+  "react-dom": "16.13.1",
+  "react-sticky-nav": "^4.0.6",
+  "react-stickynode": "^3.0.3"
  },
  "devDependencies": {
   "babel-plugin-inline-react-svg": "^1.1.1",
