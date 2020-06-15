@@ -13,7 +13,7 @@ const SiteLayout = props => {
       </Layout>
       <style jsx global>{`
           /// ADD FONT HERE
-
+    
          body {
            padding-top: 0px;
          }
