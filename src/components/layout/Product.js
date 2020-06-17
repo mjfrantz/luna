@@ -15,7 +15,7 @@ const Product = () => {
           <Card
             hoverable
             style={{ width: 240 }}
-            cover={<img alt="example" src="./../images/shampoo.jpg" />}
+            cover={<img alt="example" src="./../images/Luna-BottleWhite.jpg" />}
           >
             <Meta title="Shampoo" style={{ textAlign: 'center' }} description="A daily dose of your hair goal" />
           </Card>

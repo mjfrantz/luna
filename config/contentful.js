@@ -1,4 +1,5 @@
 import { createClient } from 'contentful';
+require('dotenv').config();
 
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
