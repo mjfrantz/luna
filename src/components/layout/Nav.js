@@ -22,7 +22,7 @@ const Nav = () => {
   ]);
   return (
     <Sticky innerZ={9999} top={0}>
-      <Menu mode="horizontal" id="menu" className="container-Nav">
+      <Menu mode="horizontal" id="menu" className="navBar">
         {links.map(({ title, path, text }) => {
           if (title === 'home') {
             return (

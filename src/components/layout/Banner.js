@@ -6,7 +6,6 @@ const { Title, Paragraph } = Typography;
 
 let easing = [0.6, -0.05, 0.01, 0.99];
 
-
 const fadeInUp = {
   initial: {
     y: 60,
@@ -23,7 +22,6 @@ const fadeInUp = {
   }
 };
 
-
 const Banner = () => {
   return (
     <motion.div initial='initial' animate='animate' exit={{ opacity: 0 }}>
@@ -31,13 +29,14 @@ const Banner = () => {
         <div className="Banner">
           <motion.div variants={fadeInUp}>
             <Title style={{ color: "black", }}>Amazing Hair Care Products</Title>
+
+            <Title style={{ color: "black" }} level={4}>To Deliver the Best Hair.</Title>
+            <Button type="primary" size="large">
+              <Link href="/products">
+                <a>Buy Formula</a>
+              </Link>
+            </Button>
           </motion.div>
-          <Title style={{ color: "black" }} level={4}>To Deliver the Best Hair.</Title>
-          <Button type="primary" size="large">
-            <Link href="/products">
-              <a>Buy Formula</a>
-            </Link>
-          </Button>
         </div>
       </div>
     </motion.div>

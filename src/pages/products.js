@@ -15,25 +15,6 @@ export async function getStaticProps() {
 }
 
 const Product = ({ entries }) => {
-  // const createProduct = (count) => {
-  //   const products = [];
-  //   const arr = Array.from(Array(count).keys());
-
-  //   for (const item in arr) {
-  //     products.push({
-  //       title: `Product ${+item + 1}`,
-  //       description:
-  //         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nulla recusandae praesentiun.',
-  //       quantity: Math.ceil(Math.random() * 10000),
-  //       price: '$' + Math.round(Math.random() * 100).toFixed(2),
-  //     });
-  //   }
-
-  //   return products;
-  // };
-
-  // const [products, setProducts] = useState(createProduct(2));
-
   return (
     <div>
       <Content style={{ padding: '20px 50px' }}>
@@ -43,7 +24,7 @@ const Product = ({ entries }) => {
           repellendus incidunt nihil asperiores in inventore aperiam nobis
           optio?
         </Title>
-    
+
         <Row
           justify='center'
           gutter={[42, 42]}
@@ -81,8 +62,8 @@ const Product = ({ entries }) => {
               </Col>
             ))
           ) : (
-            <Title level={4}>There are no products to display</Title>
-          )}
+              <Title level={4}>There are no products to display</Title>
+            )}
         </Row>
         )
       </Content>
