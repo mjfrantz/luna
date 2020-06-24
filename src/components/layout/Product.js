@@ -43,33 +43,5 @@ const Product = () => {
 export default Product;
 
 
-// <div className="about_img">
-// <Reveal effect="fadeInRight" duration={1500}><img src={require('../image/Me.png')} alt="" /></Reveal>
 
-// // .about {
-//   //  display: flex;
-//   //  justify-content: ;
-//   //  width: 50%;
-//    background-color:green;
-//    height: 50vh;
-//    text-align:center;
-//   //  margin: auto;
-//    padding: 1rem;
-//    //  font-family: Helvetica;
-//   font-style: italic;
-//  }
-
-// <Card
-//   hoverable
-//   style={{ width: 240 }}
-//   cover={<img alt="example" src="./../images/pic1.jpg" />}
-// >
-//   <Meta title="Europe Street beat" description="www.instagram.com" />
-// </Card>
-
-// <Card
-// style={{ width: '100%' }}
-// cover={<img alt="example" src="./../images/pic1.jpg" />}
-// >
-// </Card>
 
