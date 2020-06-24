@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import { Row, Layout } from 'antd';
 import Nav from './Nav';
 
+
 const { Header, Footer, Content } = Layout;
 const SiteLayout = props => {
   return (
@@ -13,7 +14,12 @@ const SiteLayout = props => {
       </Layout>
       <style jsx global>{`
           /// ADD FONT HERE
-    
+          @font-face {
+            font-family: 'Niconne', cursive;
+            src: url('/fonts/noto-sans-v9-latin-regular.woff2');
+            font-weight: bolder;
+            font-style: normal;
+            font-display: swap;
          body {
            padding-top: 0px;
          }

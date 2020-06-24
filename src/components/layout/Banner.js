@@ -29,7 +29,6 @@ const Banner = () => {
         <div className="Banner">
           <motion.div variants={fadeInUp}>
             <Title style={{ color: "black", }}>Amazing Hair Care Products</Title>
-
             <Title style={{ color: "black" }} level={4}>To Deliver the Best Hair.</Title>
             <Button type="primary" size="large">
               <Link href="/products">
