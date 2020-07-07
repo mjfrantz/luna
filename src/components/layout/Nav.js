@@ -5,8 +5,6 @@ import {
 } from 'antd';
 import Sticky from 'react-stickynode';
 
-import { HeartOutlined } from '@ant-design/icons';
-
 const { SubMenu } = Menu;
 
 const Nav = () => {

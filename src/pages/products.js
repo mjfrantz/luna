@@ -44,7 +44,7 @@ const Product = ({ entries }) => {
                   cover={
                     <img
                       alt='example'
-                      src={product.fields.image.fields.file.url}
+                      src={product.fields.image && product.fields.image.fields.file.url}
                     />
                   }
                   actions={[
