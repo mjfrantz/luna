@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Carousel, Typography, Button } from 'antd';
+import { Typography, Button } from 'antd';
 import { motion } from 'framer-motion';
 
 const { Title, Paragraph } = Typography;
@@ -28,7 +28,7 @@ const Banner = () => {
       <div className="container">
         <div className="Banner">
           <motion.div variants={fadeInUp}>
-            <Title style={{ color: "black", }}>Amazing Hair Care Products</Title>
+            <Title style={{ color: "black" }}>Amazing Hair Care Products</Title>
             <Title style={{ color: "black" }} level={4}>To Deliver the Best Hair.</Title>
             <Button type="primary" size="large">
               <Link href="/products">
