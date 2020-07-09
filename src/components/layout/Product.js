@@ -19,7 +19,8 @@ const Product = ({ data }) => {
               style={{ width: 240 }}
               cover={<img alt="example" src={product.fields.image && product.fields.image.fields.file.url} />}
             >
-              <Meta title="Shampoo" style={{ textAlign: 'center' }} description="A daily dose of your hair goal" />
+              <Meta title={product.fields.title}
+                description={product.fields.description} style={{ textAlign: 'center' }} />
             </Card>
           ))}
         </Row>
